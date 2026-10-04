@@ -685,7 +685,8 @@ function cameraFrame(scroll) {
     const morph = smoothScrollRange(scroll, 0.40, 0.54);
     const landscapeRadius = 4.7 - Math.sin(scroll * Math.PI) * 0.6 + separation * 2.6 + morph * 0.9;
     const phone = sizes.width <= 550;
-    const portraitRadius = (phone ? 12.8 : 8.9) - Math.sin(scroll * Math.PI) * 0.4 + separation * 2.0 + morph * 0.4;
+    const phoneMethod = phone ? smoothScrollRange(scroll, 0.74, 0.86) : 0;
+    const portraitRadius = (phone ? 12.8 : 8.9) + phoneMethod * 1.0 - Math.sin(scroll * Math.PI) * 0.4 + separation * 2.0 + morph * 0.4;
     const radius = lerp(landscapeRadius, portraitRadius, portrait);
     // Landscape: shift the object sideways so it never sits under a text block.
     // One weight per chapter, negative pushes the object right (text on the left).
@@ -700,7 +701,7 @@ function cameraFrame(scroll) {
         - 2 * smoothScrollRange(scroll, 0.72, 0.82);
     const visibleHeight = 2 * radius * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
     // Object centre at 70 % of the height when low, 31 % when high (clear of the header).
-    const upperOffset = phone ? 0.24 : 0.19;
+    const upperOffset = phone ? 0.24 + phoneMethod * 0.02 : 0.19;
     const y = -0.15 + portrait * stack * (stack > 0 ? 0.20 : upperOffset) * visibleHeight;
     // Screen-right axis for this orbit position (camera looks at the origin).
     const phi = scroll * Math.PI * 2.0;

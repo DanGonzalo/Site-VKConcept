@@ -610,3 +610,13 @@ body.cursor-hidden .section-reticle .cursor-outer,body.cursor-hidden .section-re
 @media(max-width:900px),(max-aspect-ratio:4/5) {
     #slide-1 .section-reticle {margin-left:0;}
 }
+
+/* Targeted final smartphone adjustments. */
+@media(max-width:550px) {
+    .main-header {height:58px;}
+    .header-progress,.grid-horizontal-line {top:58px;}
+    .header-counter {display:inline-flex;flex-shrink:0;}
+    .header-actions {gap:10px;}
+    #slide-1,#slide-3 {top:86px;}
+    .vietnam-grid {row-gap:14px;}
+}
