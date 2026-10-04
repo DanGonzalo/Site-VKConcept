@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VK CONCEPT — Votre partenaire IT France · Vietnam</title>
+<meta name="theme-color" content="#090e16">
+<link rel="icon" type="image/svg+xml" href="./assets/brand/mark.svg">
+<meta property="og:title" content="VK CONCEPT — Votre partenaire IT France · Vietnam">
+<meta property="og:description" content="Développement sur mesure, IA et équipes IT. Un accompagnement francophone depuis le Vietnam.">
+<meta name="description" content="Développement logiciel sur mesure, intelligence artificielle et renfort d’équipes IT au Vietnam pour les entreprises françaises. Un accompagnement francophone de bout en bout.">
+<link rel="stylesheet" href="./css/styles.css?v=20261004">
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three.module.js",
+    "three/examples/jsm/loaders/SVGLoader.js": "./vendor/SVGLoader.js"
+  }
+}
+</script>
+</head>
+<body>
+<noscript><style>.loader{display:none}.cinematic-container{position:relative}.slide{position:relative!important;inset:auto!important;margin:70px 0;opacity:1;visibility:visible;max-height:none;overflow:visible}.line-inner,.slide-desc,.benefit,.figure,.contact-card,.contact-lead{opacity:1;transform:none}.scroll-stage{display:none}.contact{min-height:auto}</style></noscript>
+<div class="loader" id="loader" role="status" aria-live="polite">
+  <div class="loader-inner">
+    <span class="loader-value"><span id="loader-count">00</span><span class="loader-unit">%</span></span>
+    <span class="loader-bar"><span id="loader-fill"></span></span>
+    <span class="loader-hint">Chargement</span>
+  </div>
+</div>
+<script>
+(function () {
+  var el = document.getElementById('loader'), count = document.getElementById('loader-count'), fill = document.getElementById('loader-fill');
+  var start = performance.now(), ready = false, rampAt = 0, shownAtRamp = 0, shown = 0, finished = false;
+  var MIN_HOLD = 0, RAMP = 180;   // ms: minimum time on screen, then the run to 100
+  document.body.classList.add('is-loading');
+  function finish() {
+    if (finished) return;
+    finished = true;
+    count.textContent = '100';
+    fill.style.transform = 'scaleX(1)';
+    el.classList.add('is-done');
+    document.body.classList.remove('is-loading');
+    setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 900);
+  }
+  function tick(now) {
+    if (finished) return;
+    if (ready && !rampAt && now - start >= MIN_HOLD) { rampAt = now; shownAtRamp = shown; }
+    if (rampAt) {
+      var k = Math.min(1, (now - rampAt) / RAMP);
+      shown = shownAtRamp + (100 - shownAtRamp) * (1 - Math.pow(1 - k, 3));
+    } else {
+      // Time-based pseudo progress while the modules and the scene are prepared.
+      shown = 92 * (1 - Math.exp(-(now - start) / 1600));
+    }
+    count.textContent = String(Math.round(shown)).padStart(2, '0');
+    fill.style.transform = 'scaleX(' + (shown / 100) + ')';
+    if (rampAt && shown >= 99.5) { finish(); return; }
+    requestAnimationFrame(tick);
+  }
+  window.__glassLoader = { done: function () { ready = true; } };
+  requestAnimationFrame(tick);
+  setTimeout(function () { window.__glassLoader.done(); }, 15000);   // never trap the visitor
+  setTimeout(finish, 17000);
+})();
+</script>
+<div class="cursor-inner"></div>
+
+<div class="cinematic-container">
+<div class="main-header">
+  <a class="brand" href="#slide-1">
+    <span class="brand-mark" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700"><path fill="currentColor" d="M70 100 L165 100 L270 440 L375 100 L470 100 L315 600 L225 600 Z M545 100 L635 100 L635 300 L805 100 L925 100 L720 345 L930 600 L810 600 L635 390 L635 600 L545 600 Z"/></svg></span>
+    <span class="brand-text">VK CONCEPT</span>
+  </a>
+  <nav class="header-nav" aria-label="Chapitres">
+    <a href="#slide-1" class="nav-link is-active">Accueil</a>
+    <a href="#slide-2" class="nav-link">Notre approche</a>
+    <a href="#slide-3" class="nav-link">Expertises</a>
+    <a href="#slide-4" class="nav-link">Méthode</a>
+  </nav>
+  <div class="header-actions">
+    <span class="header-counter" aria-hidden="true"><span id="brand-chapter">01</span><span class="counter-sep"></span>05</span>
+    <a href="#contact" class="contact-btn">Parlons-en <span class="btn-arrow">&#8599;</span></a>
+  </div>
+</div>
+
+<div class="slide" id="slide-1">
+  <h1 class="slide-title">Votre projet IT. <br>Notre expertise.</h1>
+  <p class="hero-eyebrow">FRANCE <span>↔</span> VIETNAM · PARTENAIRE IT</p>
+  <div class="desc-row">
+    <p class="slide-desc col-1">Développement logiciel, intelligence artificielle et équipes IT au Vietnam, avec un interlocuteur francophone. Du cadrage à la livraison, avançons ensemble.</p>
+  </div>
+  <a class="hero-cta" href="#contact">Discutons de votre projet <span>↗</span></a>
+  <a class="vietnam-link" href="#pourquoi-vietnam">Pourquoi externaliser au Vietnam ? ↓</a>
+<div class="section-reticle" aria-hidden="true"><div class="cursor-outer"><span class="cursor-ticks"><span></span><span></span><span></span><span></span></span></div><span class="cursor-label">000</span></div>
+</div>
+
+<div class="slide" id="slide-2">
+  <h2 class="slide-title">Deux cultures. <br>Un même cap.</h2>
+  <p class="slide-desc">Basée au Vietnam, VK CONCEPT relie les besoins des entreprises françaises à un écosystème technologique dynamique. Un interlocuteur francophone vous accompagne pour cadrer votre projet et suivre son avancement. Notre ambition : réunir expertise technique, communication claire et coûts maîtrisés.</p>
+<div class="section-reticle" aria-hidden="true"><div class="cursor-outer"><span class="cursor-ticks"><span></span><span></span><span></span><span></span></span></div><span class="cursor-label">000</span></div>
+</div>
+
+<div class="slide" id="slide-3">
+  <h2 class="slide-title">La technologie, <br>à votre service.</h2>
+  <ul class="benefits">
+    <li class="benefit"><span class="offer-number" aria-hidden="true">01</span><div><h3>Logiciels sur mesure</h3><p>Applications web et mobiles, outils métiers et API. Connectez vos systèmes et simplifiez votre quotidien.</p></div></li>
+    <li class="benefit"><span class="offer-number" aria-hidden="true">02</span><div><h3>Intelligence artificielle</h3><p>Traitement de documents, assistants internes et automatisation. Partons d’un usage concret pour tester sa valeur.</p></div></li>
+    <li class="benefit"><span class="offer-number" aria-hidden="true">03</span><div><h3>Renfort d’équipe IT</h3><p>Des compétences adaptées à votre projet au Vietnam. Définissons les profils, la durée et le cadre de collaboration.</p></div></li>
+  </ul>
+<div class="section-reticle" aria-hidden="true"><div class="cursor-outer"><span class="cursor-ticks"><span></span><span></span><span></span><span></span></span></div><span class="cursor-label">000</span></div>
+</div>
+
+<div class="slide" id="slide-4">
+  <h2 class="slide-title">Un projet clair. <br>À chaque étape.</h2>
+  <p class="slide-desc">Un besoin cadré, une équipe adaptée et des points réguliers. À chaque étape, nous définissons ensemble les priorités et les livrables.</p>
+  <dl class="figures">
+    <div class="figure"><dt><span class="figure-value" data-count="1" data-decimals="0">1</span></dt><dd>Cadrer<br><span class="step-detail">Objectifs, périmètre<br>et priorités</span></dd></div>
+    <div class="figure"><dt><span class="figure-value" data-count="2" data-decimals="0">2</span></dt><dd>Organiser<br><span class="step-detail">Profils, planning<br>et collaboration</span></dd></div>
+    <div class="figure"><dt><span class="figure-value" data-count="3" data-decimals="0">3</span></dt><dd>Livrer<br><span class="step-detail">Démonstrations, retours<br>et accompagnement</span></dd></div>
+  </dl>
+<div class="section-reticle" aria-hidden="true"><div class="cursor-outer"><span class="cursor-ticks"><span></span><span></span><span></span><span></span></span></div><span class="cursor-label">000</span></div>
+</div>
+</div>
+
+<div class="scroll-stage" aria-hidden="true"></div>
+
+<section class="vietnam-section" id="pourquoi-vietnam" aria-labelledby="vietnam-title">
+  <div class="vietnam-wrap">
+    <div class="section-reticle" aria-hidden="true"><div class="cursor-outer"><span class="cursor-ticks"><span></span><span></span><span></span><span></span></span></div><span class="cursor-label">VIETNAM</span></div>
+    <p class="vietnam-eyebrow">FRANCE ↔ VIETNAM · EXTERNALISATION IT</p>
+    <h2 id="vietnam-title">Pourquoi le Vietnam,<br><span>avec VK CONCEPT ?</span></h2>
+    <p class="vietnam-intro">Associez des compétences techniques au Vietnam à un accompagnement francophone. Nous construisons avec vous un cadre de collaboration adapté à votre projet.</p>
+    <div class="vietnam-grid">
+      <article><span class="vietnam-number">01</span><h3>Des coûts maîtrisés</h3><p>Une organisation au Vietnam pour optimiser votre budget. Le périmètre, les profils et le suivi sont définis ensemble pour évaluer le coût global du projet.</p></article>
+      <article><span class="vietnam-number">02</span><h3>Un interlocuteur francophone</h3><p>Échangez en français avec un référent local qui comprend vos enjeux et fait le lien avec l’équipe technique.</p></article>
+      <article><span class="vietnam-number">03</span><h3>Des compétences adaptées</h3><p>Développeurs, spécialistes de l’IA et consultants : des profils sélectionnés selon les exigences techniques et le contexte de votre entreprise.</p></article>
+      <article><span class="vietnam-number">04</span><h3>Qualité et engagement</h3><p>Un cadrage précis, des points réguliers et une communication transparente pour suivre les livrables et traiter les difficultés au fil du projet.</p></article>
+      <article><span class="vietnam-number">05</span><h3>Une infrastructure adaptée</h3><p>Connectivité, hébergement et outils de collaboration sont évalués selon vos besoins de disponibilité, de sécurité et d’intégration.</p></article>
+      <article><span class="vietnam-number">06</span><h3>Une collaboration fluide</h3><p>Des attentes partagées, une méthode de travail claire et des échanges réguliers pour rapprocher les équipes françaises et vietnamiennes.</p></article>
+    </div>
+    <aside class="vietnam-market" aria-labelledby="market-title">
+      <div><p class="vietnam-eyebrow">LE CONTEXTE DU MARCHÉ</p><h3 id="market-title">Un écosystème tourné vers les services numériques</h3><p>Le Vietnam figurait parmi les dix premières destinations du Global Services Location Index de Kearney en 2021. Ce classement historique constitue un repère pour l’externalisation internationale des services.</p><a href="https://www.prnewswire.com/news-releases/kearney-releases-2021-global-services-location-index-301269526.html" target="_blank" rel="noopener noreferrer">Lire le communiqué Kearney de 2021 ↗</a></div>
+      <div class="market-focus"><span>Votre projet, avant les moyennes</span><p>Le budget et le choix de l’équipe dépendent de vos objectifs, des compétences recherchées et du cadre de collaboration. Parlons de votre besoin pour définir une proposition adaptée.</p><a href="#contact">Discutons de votre projet ↗</a></div>
+    </aside>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="contact-inner">
+    <div class="contact-intro">
+      <div class="section-reticle" aria-hidden="true"><div class="cursor-outer"><span class="cursor-ticks"><span></span><span></span><span></span><span></span></span></div><span class="cursor-label">CONTACT</span></div>
+      <p class="contact-eyebrow"><span class="eyebrow-dot"></span>Parlons de votre projet / 05</p>
+      <h2 class="contact-title" id="contact-title"><span class="line"><span class="line-inner">Votre prochain</span></span><span class="line muted"><span class="line-inner">projet commence ici.</span></span></h2>
+      <p class="contact-lead">Une application à créer, un processus à automatiser ou une équipe à renforcer ?<br>Présentez-nous votre besoin.</p>
+      <a class="contact-mail" href="mailto:david.revert@vkconceptvn.com">david.revert@vkconceptvn.com <span class="arrow">↗</span></a>
+    </div>
+    <form class="contact-card" id="contact-form" data-email="david.revert@vkconceptvn.com">
+      <div class="card-head"><span>Votre message</span><span class="arrow">&#8599;</span></div>
+      <div class="field-grid">
+        <label class="field"><span class="field-label">Votre nom <em>*</em></span><input type="text" name="name" placeholder="Nom et prénom" autocomplete="name" required></label>
+        <label class="field"><span class="field-label">Votre e-mail <em>*</em></span><input type="email" name="email" placeholder="vous@entreprise.com" autocomplete="email" required></label>
+        <label class="field field-wide"><span class="field-label">Entreprise <small>optionnel</small></span><input type="text" name="company" placeholder="Nom de l'entreprise" autocomplete="organization"></label>
+        <label class="field field-wide"><span class="field-label">Votre projet <em>*</em></span><textarea name="project" rows="4" placeholder="Votre objectif, les outils concernés, le délai souhaité…" required></textarea></label>
+      </div>
+      <div class="card-foot">
+        <p class="card-note">Votre messagerie s’ouvrira<br>avec le message prêt à envoyer.</p>
+        <button type="submit" class="pill-btn"><span class="btn-label">Préparer mon e-mail</span> <span class="arrow">&#8599;</span></button>
+      </div>
+    <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+  <footer class="contact-footer">
+    <span>&copy; 2026 &mdash; VK CONCEPT</span>
+    <span class="footer-spec">France · Vietnam / Partenaire IT</span>
+    <a href="#slide-1" class="footer-top">Retour en haut <span aria-hidden="true">&uarr;</span></a>
+  </footer>
+</section>
+<div class="grid-horizontal-line"></div>
+<div class="header-progress" aria-hidden="true"><span id="header-progress-fill"></span></div>
+<div class="story-progress" aria-hidden="true">
+  <div class="story-dashes">
+    <div class="story-dash"><div class="story-dash-fill" id="dash-fill-1"></div></div>
+    <div class="story-dash"><div class="story-dash-fill" id="dash-fill-2"></div></div>
+    <div class="story-dash"><div class="story-dash-fill" id="dash-fill-3"></div></div>
+    <div class="story-dash"><div class="story-dash-fill" id="dash-fill-4"></div></div>
+  </div>
+</div>
+<canvas id="webgl" aria-hidden="true"></canvas>
+<script>window.addEventListener("error",function(){document.body.classList.add("render-fallback");document.body.classList.remove("is-loading");var l=document.getElementById("loader");if(l)l.remove();});window.addEventListener("unhandledrejection",function(){document.body.classList.add("render-fallback");document.body.classList.remove("is-loading");var l=document.getElementById("loader");if(l)l.remove();});</script>
+<script type="module" src="./js/app.js?v=20261004"></script>
+</body>
+</html>
