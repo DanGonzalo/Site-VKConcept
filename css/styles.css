@@ -603,3 +603,10 @@ body.cursor-hidden .section-reticle .cursor-outer,body.cursor-hidden .section-re
     #slide-4 .slide-desc {font-size:13px;}
     #slide-4 .figure dt {font-size:28px;}
 }
+
+/* Final hero spacing: keep the existing composition and reticle box. */
+#slide-1 .vietnam-link {margin-top:32px;}
+#slide-1 .section-reticle {margin-left:60px;}
+@media(max-width:900px),(max-aspect-ratio:4/5) {
+    #slide-1 .section-reticle {margin-left:0;}
+}
